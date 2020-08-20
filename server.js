@@ -3,8 +3,9 @@ const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const app = express();
+require("dotenv").config();
 
-//PORT
+//PORT  
 const PORT = process.env.PORT || 3000;
 
 //application middleware
@@ -16,7 +17,7 @@ app.use(express.static("public"));
 //connecting to the database
 mongoose.connect(
   process.env.MONGODB_URI ||
-    "mongodb://sullivan:sullivan25@ds025752.mlab.com:25752/heroku_64fk3f5d",
+    "",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
