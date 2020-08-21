@@ -37,5 +37,16 @@ module.exports = function (app) {
       });
   });
   
+   // GET stats page
+   app.get("/api/workouts/range", (req, res) => {
+    const start = new Date().setDate(new Date().getDate() - 7);
+    Workout.find({ day: { $gte: start, $lte: Date.now() } })
+      .then((dbWorkout) => {
+        res.json(dbWorkout);
+      })
+      .catch((err) => {
+        res.json(err);
+      });
+  });
 
 };
