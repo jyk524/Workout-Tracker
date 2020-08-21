@@ -13,6 +13,7 @@
   8. [Links](#links)
   
   ![image](asset\fitness-tracker.png)
+  image in asset folder*
 
   ### Description
   * To help us track our workouts a simple input, including a working database using mongoDB and a stats page with graphs to help visualize the workouts
